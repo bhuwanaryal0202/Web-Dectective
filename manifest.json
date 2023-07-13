@@ -4,6 +4,12 @@
     "version": "1.0",
     "description": "A Chrome extension to pick website details",
     "permissions": ["activeTab", "tabs"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"]
+      }
+    ],
     "action": {
       "default_popup": "popup.html",
       "default_icon": "icon.png"
